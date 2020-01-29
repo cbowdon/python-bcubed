@@ -69,6 +69,12 @@ fscore = bcubed.fscore(precision, recall, beta=0.5)  # weights precision higher
 
 A complete example can be found in the included `example.py` file, where the examples of the source publication are used.
 
+Parallelised versions of the precision and recall functions are provided in `bcubed.parallel`. This can speed up the calculations for large datasets, but note that there is an overhead associated with the parallelism so it is unhelpful for smaller datasets. As a rule of thumb, it's useful when there are more than 5k items, depending on the system.
+
+## Running tests
+
+Tests can be run by installing `pytest` from pip and running `pytest test`.
+
 ## License
 
 This software is under the **Apache License 2.0**.
